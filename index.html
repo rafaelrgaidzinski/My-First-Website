@@ -10,7 +10,68 @@
         <meta name="keywords" content="HTML">
         <meta name="author" content="Rafael Ronsoni Gaidzinski">
         <meta name="robots" content="...">
-        <style></style>
+        <style>
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 2px;
+                empty-cells: hide;
+            }
+
+            caption {
+                caption-side: bottom;
+                color: black;
+                font-size: 14px;
+                font-weight: bold;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            }
+
+            thead {
+                color: green;
+                font-size: 18px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace;
+                background-color: lightgray;
+                text-align: left;
+            }
+
+            tbody {
+                color: black;
+            }
+
+            tfoot {
+                color: green;
+                font-weight: bold;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: lightgray;
+            }
+
+            table, th, td {
+                border: 2px solid grey;
+            }
+
+            header li {
+                list-style: none;
+                margin-bottom: 5px;
+            }
+
+            #idEndereco {
+                text-align: center;
+            }
+
+            tbody tr:nth-child(even){
+                background-color: whitesmoke;
+            }
+
+            tbody tr:nth-child(odd){
+                background-color: lightgreen;
+            }
+
+            tbody tr:hover {
+                background-color: greenyellow;
+            }
+
+        </style>
         <script></script>
         <base href="https://www.w3schools.com/">
     </head>
@@ -19,10 +80,11 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#historia">História do HTML</a></li>
-                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#tags-html">Tags HTML</a></li>
-                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#estrutura-hierarquica">Estrutura Hierárquica HTML</a></li>
-                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#dom">DOM</a></li>
+                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#historia"><button>História do HTML</button></a></li>
+                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#tags-html"><button>Tags HTML</button></a></li>
+                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#estrutura-hierarquica"><button>Estrutura Hierárquica HTML</button></a></li>
+                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#dom"><button>DOM</button></a></li>
+                    <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#tabelas"><button>Tabelas</button></a></li>
                 </ul>
             </nav>
         </header>
@@ -61,6 +123,19 @@
                     por dar função aos elementos da página, exibir animações entre outras funcionalidades.
                     </p>
 
+                    <h2 class="sub-titulo">URL</h2>
+                    <p> O termo <dfn>URL</dfn> que é um Localizador Uniforme de Recursos padroniza uma série de informações específicas 
+                        explicadas abaixo:
+                    </p>
+                    <p> <strong>Exemplo de URL:</strong> Protocolo://Nome_do_Dominio:porta/caminho_do_Arquivo?parâmetro=informacao#âncora</p>
+                    <p>Protocolos</p>
+                    <ul>
+                        <li>Https: porta 443</li>
+                        <li>Http: porta 80</li>
+                        <li>ftp: porta 21</li>
+                        <li>file: local</li>
+                    </ul>
+
                 </div>
             
             </section>
@@ -84,7 +159,7 @@
                                 que é uma imagem que aparece como um icone ao lado do titulo na aba de navegação e também quando o usuário 
                                 salva o site como favorito criando estilo e referencia de marca
                             </li>
-                            <li>A tag META com o atributo 'charset' define o conjunto de caracteres que será interpretado pelo navegador</li>
+                            <li>A tag META com o atributo CHARSET define o conjunto de caracteres que será interpretado pelo navegador</li>
                             <li>A tag META possui diversos atributos que podem ser conferidos neste 
                                 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/meta" target="_blank">LINK</a>
                             </li>
@@ -117,7 +192,7 @@
                         também é reconhecida pelo leitor para cegos e dá mais enfase na sua fala
                     </em></p>
                     <p><q>A tag Q significa quotes (citação) e é reconhecida pelo navegador como aspas duplas que demarcam a citação de um autor que se deseja referenciar</q></p>
-                    <p> A tag UL é utilizada para apresentar uma lista não ordenada e a tag 'ol' é utilizada para apresentar uma lista ordenada, e a tag 'li' são os itens da lista
+                    <p> A tag UL é utilizada para apresentar uma lista não ordenada e a tag OL é utilizada para apresentar uma lista ordenada, e a tag LI são os itens da lista
                         seguem os exemplos abaixo</p>
                     <p>Lista não ordenada:</p>
                     <ul>
@@ -131,6 +206,23 @@
                         <li>Segundo Item</li>
                         <li>Terceiro Item</li>
                     </ol>
+                    <p>A tag BUTTON é utilizada para criar um botão que posteriormente pode receber uma funcionalidade através de um código Javascript</p>
+                    <p> A tag A é utilizada para criar um link que referência outra página através do atributo HREF, onde é possível passar uma URL 
+                        da página que será o destino do link</p>
+                    <p> Através da tag A também podemos utilizar ÂNCORAS para fazer um scroll para uma determinada seção da própria ou de 
+                        uma outra página, onde identificamos a sessão com uma tag ID e passamos como informação para o atributo HREF do link 
+                        o nome do id da seção precedido pelo caractere # (Exemplo href="#id")</p>
+                    <p> Através da tag A também podemos utilizar o atributo HREF para encaminhar o link para abrir um aplicativo/software de email
+                        ou para sincronizar com seu celular sendo possível fazer uma ligação, conforme nos exemplos a seguir: 
+                    </p>
+                    <code>
+                        <p>href="mailto:email@email.com"</p>
+                        <p>href="tel:+48999999999"</p>
+                    </code>
+                    <p> Quando for utilizar os atributos HREF de links ou SRC de imagens, videos entre outros componentes é muito importante
+                        referenciar os arquivos utilizando o caminho relativo para navegar entre os diretórios do site, pois assim não se corre
+                        o risco de perder a referência. 
+                    </p>
                     <p> A tag IMG é utilizada para adicionar imagens ao documento html, e os atributos SRC que indica o local da imagem e o atributo
                         ALT que adiciona uma descrição da foto para que o leitor de tela possa fazer a leitura para deficientes visuais são obrigatórios
                     </p>
@@ -159,9 +251,119 @@
                 
             </section>
 
+            <section id="tabelas">
+
+                <h1 id="titulo-da-sessao">Tabelas</h1>
+
+                <div>
+                    
+                    <p> As tabelas em html são criadas utilizando as tags abaixo:</p>
+                    <ul>
+                        <li>A tag &#60;table&#62; é utilizada para delimitar o inicio e final da tabela</li>
+                        <li>A tag &#60;th&#62; é utilizada para criar um titulo definindo que tipo de informação a coluna irá conter</li>
+                        <li>A tag &#60;tr&#62; é utilizada para criar uma linha na tabela</li>
+                        <li>A tag &#60;td&#62; é utilizada para criar uma coluna dentro da linha</li>
+                        <li>O atributo rowspan utilizado nas tags &#60;td&#62; são utilizados para indicar quantas linhas uma célula da tabela irá ocupar</li>
+                        <li>O atributo colspan utilizado nas tags &#60;td&#62; são utilizados para indicar quantas colunas uma célula da tabela irá ocupar</li>
+                        <li>A tag &#60;thead&#62; é utilizada para delimitar o cabeçalho da tabela onde vão os titulos das colunas</li>
+                        <li>A tag &#60;tbody&#62; é utilizada para delimitar o corpo da tabela onde vão as informações</li>
+                        <li>A tag &#60;tfoot&#62; é utilizada para delimitar o rodapé da tabela</li>
+                    </ul>
+
+                </div>
+
+                <div>
+                    
+                    <table>
+                        <caption>Tabela de informações de contato</caption>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Nome</th>
+                                <th rowspan="2">E-mail</th>
+                                <th rowspan="2">Telefone</th>
+                                <th id="idEndereco" colspan="4">Endereço</th>
+                            </tr>
+                            <tr>
+                                <th>Rua</th>
+                                <th>Número</th>
+                                <th>Cidade</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Rafael Ronsoni Gaidzinski</td>
+                                <td>rafaelgaidzinski@gmail.com</td>
+                                <td>+55 48 99999-9999</td>
+                                <td>Rua Dom Pedro I</td>
+                                <td>195</td>
+                                <td>Criciúma</td>
+                                <td>SC</td>
+                            </tr>
+                            <tr>
+                                <td>Marco Aurélio Gaidzinski</td>
+                                <td>marcorelha@gmail.com</td>
+                                <td>+55 48 99999-9999</td>
+                                <td>Rua Dom Pedro II</td>
+                                <td>200</td>
+                                <td>Criciúma</td>
+                                <td>SC</td>
+                            </tr>
+                            <tr>
+                                <td>Silvana Ronsoni Gaidzinski</td>
+                                <td>silvana@gmail.com</td>
+                                <td>+55 48 99999-9999</td>
+                                <td>Rua Dom Pedro II</td>
+                                <td>205</td>
+                                <td>Morro da Fumaça</td>
+                                <td>SC</td>
+                            </tr>
+
+                            <tr>
+                                <td>Rafael Ronsoni Gaidzinski</td>
+                                <td>rafaelgaidzinski@gmail.com</td>
+                                <td>+55 48 99999-9999</td>
+                                <td>Rua Dom Pedro I</td>
+                                <td>195</td>
+                                <td>Criciúma</td>
+                                <td>SC</td>
+                            </tr>
+                            <tr>
+                                <td>Marco Aurélio Gaidzinski</td>
+                                <td>marcorelha@gmail.com</td>
+                                <td>+55 48 99999-9999</td>
+                                <td>Rua Dom Pedro II</td>
+                                <td>200</td>
+                                <td>Criciúma</td>
+                                <td>SC</td>
+                            </tr>
+                            <tr>
+                                <td>Silvana Ronsoni Gaidzinski</td>
+                                <td>silvana@gmail.com</td>
+                                <td>+55 48 99999-9999</td>
+                                <td>Rua Dom Pedro II</td>
+                                <td>205</td>
+                                <td>Morro da Fumaça</td>
+                                <td>SC</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="7">Para maiores informações entre em contato.</td>
+                            </tr>
+                        </tfoot>
+                        
+                    </table>
+
+                </div>
+
+            </section>
+
             <section id="estrutura-hierarquica">
 
-                <h1> Estrutura Hierárquica de um Documento HTML</h1>
+                <h1 id="titulo-da-sessao"> Estrutura Hierárquica de um Documento HTML</h1>
 
                 <div>
 
@@ -228,6 +430,7 @@
                         <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#tags-html">Tags HTML</a></li>
                         <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#estrutura-hierarquica">Estrutura Hierárquica HTML</a></li>
                         <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#dom">DOM</a></li>
+                        <li><a href="https://rafaelrgaidzinski.github.io/My-First-Website/#tabelas">Tabelas</a></li>
                     </ul>
                 </nav>
             </div>
